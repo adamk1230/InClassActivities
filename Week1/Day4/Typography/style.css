@@ -1,0 +1,25 @@
+
+*{
+	max-width: 400px;
+}
+
+#fontfamily{
+
+	font-family: 'Baloo', cursive;
+}
+
+#fontsize{
+	font-size: 24px;
+}
+
+#fontweight{
+	font-weight: 900;
+}
+
+#lineheight{
+	line-height: 200%;
+}
+
+#letterspace{
+	letter-spacing: 5px;
+}
