@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bands</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+var favoriteBands = ["rhcp", "weezer", "radiohead"];
+
+var yourFavorite = prompt("What is your favorite band?");
+
+var band = yourFavorite.toLowerCase();
+
+var searchResults = favoriteBands.indexOf(band);
+
+if (searchResults === -1) {
+	alert("Nah");
+}
+else {
+	alert("Yeah");
+}
+
+</script>
+
+</body>
+</html>
