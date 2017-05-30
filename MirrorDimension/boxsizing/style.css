@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+#masthead {
+  position: fixed;
+  width: 100%;
+  /*overflow: auto;*/
+  color: #fff;
+  background: #fff;
+  border: 5px solid #ccc;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
+  border: 5px solid red;
+}
