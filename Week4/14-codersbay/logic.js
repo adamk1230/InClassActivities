@@ -96,8 +96,8 @@ console.log(highPrice);
     });
 
     // Change the HTML to reflect the new high price and bidder
-    $("#highest-bidder").html(bidderName);
-    $("#highest-price").html(bidderPrice);
+    // $("#highest-bidder").html(bidderName);
+    // $("#highest-price").html(bidderPrice);
 
   }
 

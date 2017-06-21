@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>child test</title>
+	<meta charset="utf-8">
+	
+	<!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+
+</head>
+<body>
+
+<button class="btn btn-primary" id="submit-bid" value="5" type="submit">Submit</button>
+
+<script>
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDPH3iv3vFrT44PpwgKX4oKxIaZhOfrXtU",
+    authDomain: "test-1c091.firebaseapp.com",
+    databaseURL: "https://test-1c091.firebaseio.com",
+    projectId: "test-1c091",
+    storageBucket: "test-1c091.appspot.com",
+    messagingSenderId: "222917817283"
+  };
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+
+  var connectionsRef = database.ref("/connections");
+
+
+  $("#submit-bid").on("click", function(event){
+    event.preventDefault();
+
+  	console.log($("#submit-bid").val());
+  	var value = $("#submit-bid").val();
+
+  	connectionsRef.set({
+  		child: value,
+      kid: 30,
+      baby: 6
+  	});
+
+  });
+
+
+  database.ref().on("child_added", function(snapshot) {
+    console.log("child added on ref");
+  });
+	
+  connectionsRef.on("child_added", function(snapshot) {
+    console.log("child added on connections");
+  });
+
+
+</script>
+
+
+
+
+</body>
+</html>

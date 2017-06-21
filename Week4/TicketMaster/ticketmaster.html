@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	var key = "yD4krnxIq1cwJSsa6abhijYfTCfZ9m4i";
+
+	var parameters = $.param({
+		apikey: key,
+		geoPoint: "dr5n6kehp"
+	})
+
+	$.ajax({
+		url: "https://app.ticketmaster.com/discovery/v2/events.json?" + parameters,
+		method: "GET"
+	}).done(function(res){
+		console.log(res);
+	});
+</script>
+
+<script src="geohash.js" type="text/javascript"></script>
+
+</body>
+</html>
